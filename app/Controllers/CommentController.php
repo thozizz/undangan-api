@@ -71,9 +71,9 @@ class CommentController extends Controller
 
     public function all(Request $request)
     {
-        if ($request->get('id', '') !== env('JWT_KEY')) {
-            return $this->json->error(['unauthorized'], 401);
-        }
+//         if ($request->get('id', '') !== env('JWT_KEY')) {
+//             return $this->json->error(['unauthorized'], 401);
+//         }
 
         $data = Comment::orderBy('id', 'DESC')
             ->get()
